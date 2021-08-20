@@ -1,6 +1,5 @@
-namespace inoa.code_challenge.domain.DTO.Message
+namespace inoa.code_challenge.domain.Model.DTO.Message
 {
-
     public class StockQuoteValidateRequest
     {
         public string StockName { get; set; }          

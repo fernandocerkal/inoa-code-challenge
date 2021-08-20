@@ -5,5 +5,14 @@
     <RootNamespace>inoa.code_challenge.api</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\3.domain\inoa.code-challenge.domain\inoa.code-challenge.domain.csproj" />
+    <ProjectReference Include="..\..\2.application\inoa.code-challenge.application\inoa.code-challenge.application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.2.1" />
+  </ItemGroup>
 
 </Project>

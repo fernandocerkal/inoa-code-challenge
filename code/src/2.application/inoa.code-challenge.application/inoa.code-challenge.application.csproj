@@ -5,4 +5,7 @@
     <RootNamespace>inoa.code_challenge.application</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\3.domain\inoa.code-challenge.domain\inoa.code-challenge.domain.csproj" />
+  </ItemGroup>
 </Project>
