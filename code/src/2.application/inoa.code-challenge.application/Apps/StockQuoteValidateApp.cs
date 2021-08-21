@@ -1,6 +1,8 @@
 ﻿using inoa.code_challenge.domain.Model.DTO.Message;
 using inoa.code_challenge.domain.Interfaces.Apps;
 using inoa.code_challenge.domain.Interfaces.Services;
+using inoa.code_challenge.domain.Model.DTO.Data;
+using System;
 
 namespace inoa.code_challenge.application.Apps
 {
@@ -12,6 +14,14 @@ namespace inoa.code_challenge.application.Apps
             _stockQuoteValidateService = stockQuoteValidateService;
         }
 
-        public bool Validate(StockQuoteValidateRequest request) => _stockQuoteValidateService.Validate(request);
+        public BaseResponse<StockAlertDTO> Validate(StockQuoteValidateRequest request) 
+        {            
+            var stockAlert = _stockQuoteValidateService.Validate(request);
+            return new BaseResponse<StockAlertDTO>()
+            {
+                Data = stockAlert,
+                Situation = true
+            };            
+        } 
     }
 }

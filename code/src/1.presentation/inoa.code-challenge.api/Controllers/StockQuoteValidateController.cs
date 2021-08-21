@@ -3,6 +3,7 @@ using inoa.code_challenge.domain.Model.DTO.Message;
 using inoa.code_challenge.domain.Interfaces.Apps;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using inoa.code_challenge.domain.Model.DTO.Data;
 
 namespace inoa.code_challenge.api.Controllers
 {
@@ -13,23 +14,29 @@ namespace inoa.code_challenge.api.Controllers
         private readonly ILogger<StockQuoteValidateController> _logger;
         private readonly IStockQuoteValidateApp _stockQuoteValidateApp;
 
-        public StockQuoteValidateController(ILogger<StockQuoteValidateController> logger, IStockQuoteValidateApp stockQuoteValidateApp)
+        public StockQuoteValidateController(ILogger<StockQuoteValidateController> logger, 
+                                            IStockQuoteValidateApp stockQuoteValidateApp)
         {
             _logger = logger;
             _stockQuoteValidateApp = stockQuoteValidateApp;
         }
 
         [HttpPost]
-        public IActionResult Validate(StockQuoteValidateRequest request)
+        public ActionResult<BaseResponse<StockAlertDTO>> Validate(StockQuoteValidateRequest request)
         {
             try
-            {
-                return Ok(true);
+            {                
+                return Ok(_stockQuoteValidateApp.Validate(request));
             }
             catch(Exception ex)
             {
                 _logger.LogError("Validade", ex);
-                return BadRequest(ex);
+
+                return BadRequest(new BaseResponse<StockAlertDTO>()
+                {
+                    Situation = false,
+                    Message = ex.Message
+                });
             }
         }
     }

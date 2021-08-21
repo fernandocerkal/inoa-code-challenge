@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inoa.code-challenge.infraTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inoa.code-challenge.domainTest", "src\5.tests\inoa.code-challenge.domainTest\inoa.code-challenge.domainTest.csproj", "{D3879E7A-79B7-4C9D-AB0A-12D623E8EEE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inoa.code-challenge.ioc", "src\4.infra\inoa.code-challenge.ioc\inoa.code-challenge.ioc.csproj", "{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -166,6 +168,18 @@ Global
 		{D3879E7A-79B7-4C9D-AB0A-12D623E8EEE9}.Release|x64.Build.0 = Release|Any CPU
 		{D3879E7A-79B7-4C9D-AB0A-12D623E8EEE9}.Release|x86.ActiveCfg = Release|Any CPU
 		{D3879E7A-79B7-4C9D-AB0A-12D623E8EEE9}.Release|x86.Build.0 = Release|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Debug|x64.Build.0 = Debug|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Release|x64.ActiveCfg = Release|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Release|x64.Build.0 = Release|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8D6CF11A-C2AB-4B9E-BDF1-77FDF60B9E8C} = {46EEA5DE-41CA-4E31-A736-FD712CAA9E34}
@@ -182,5 +196,6 @@ Global
 		{673C73C5-0273-44DB-A3C6-33841B86BB55} = {C1DB9812-3A4D-4925-B7CB-B124DD036F09}
 		{FC2625ED-9EE5-44C0-972A-0B83C9FF3615} = {C1DB9812-3A4D-4925-B7CB-B124DD036F09}
 		{D3879E7A-79B7-4C9D-AB0A-12D623E8EEE9} = {C1DB9812-3A4D-4925-B7CB-B124DD036F09}
+		{C8A0BC3C-60FF-48AB-B55C-F7B7D9A39A0E} = {08090B0D-BB0F-4257-B5BD-7827A4604BDC}
 	EndGlobalSection
 EndGlobal

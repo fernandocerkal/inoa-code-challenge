@@ -1,3 +1,4 @@
+using inoa.code_challenge.ioc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,8 @@ namespace inoa.code_challenge.api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "inoa.code-challenge.api", Version = "v1" });
             });
+
+            DependencyInjection.Configure(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

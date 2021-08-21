@@ -1,9 +1,9 @@
-using inoa.code_challenge.domain.Model.DTO.Mail;
+using inoa.code_challenge.domain.Model.DTO.Data;
 
 namespace inoa.code_challenge.domain.Interfaces.Adapters
 {    
     public interface IMailAdapter
     {
-        bool SendMail(MailDataDTO mailData);
+        bool SendMail(StockAlertDTO stockAltert);
     }
 }
