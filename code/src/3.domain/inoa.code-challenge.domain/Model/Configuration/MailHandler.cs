@@ -8,7 +8,8 @@ namespace inoa.code_challenge.domain.Model.Configuration
     public class MailHandler
     {
        public string To { get; set; }                    
-       public string From { get; set; }                  
+       public string From { get; set; }     
+       public string FromName { get; set; }                         
        public string ReplyTo { get; set; }                      
        public string Subject { get; set; }    
        public string ResourcesPath { get; set; }    
