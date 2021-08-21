@@ -1,4 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>inoa.code_challenge.ioc</RootNamespace>
+  </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\3.domain\inoa.code-challenge.domain\inoa.code-challenge.domain.csproj" />
@@ -6,13 +11,8 @@
     <ProjectReference Include="..\..\2.application\inoa.code-challenge.application\inoa.code-challenge.application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+  <ItemGroup>    
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />    
   </ItemGroup>
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>inoa.code_challenge.ioc</RootNamespace>
-  </PropertyGroup>
 
 </Project>

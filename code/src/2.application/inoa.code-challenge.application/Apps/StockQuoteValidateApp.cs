@@ -19,8 +19,8 @@ namespace inoa.code_challenge.application.Apps
             var stockAlert = _stockQuoteValidateService.Validate(request);
             return new BaseResponse<StockAlertDTO>()
             {
-                Data = stockAlert,
-                Situation = true
+                Data        = stockAlert,
+                Situation   = true
             };            
         } 
     }

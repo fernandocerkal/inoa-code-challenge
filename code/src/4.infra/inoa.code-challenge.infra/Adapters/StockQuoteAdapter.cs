@@ -8,7 +8,12 @@ namespace inoa.code_challenge.infra
     {      
         public StockQuoteDTO GetStockQuote(StockQuoteValidateRequest request)
         {
-            throw new System.NotImplementedException();
+            //todo: remover mock
+            return new StockQuoteDTO()
+            {
+                Price = 22,
+                StockName = "PETR3"                
+            };
         }
     }
 }

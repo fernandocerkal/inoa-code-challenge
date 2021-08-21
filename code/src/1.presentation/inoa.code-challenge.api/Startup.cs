@@ -1,9 +1,11 @@
+using inoa.code_challenge.domain.Model.Configuration;
 using inoa.code_challenge.ioc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace inoa.code_challenge.api
@@ -27,6 +29,8 @@ namespace inoa.code_challenge.api
             });
 
             DependencyInjection.Configure(services);
+            var smtpConfiguration = new SmtpConfiguration();
+            new ConfigureFromConfigurationOptions<SmtpConfiguration>(Configuration.GetSection("SmtpConfiguration")).Configure(smtpConfiguration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

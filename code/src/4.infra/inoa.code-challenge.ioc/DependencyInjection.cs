@@ -15,9 +15,7 @@ namespace inoa.code_challenge.ioc
             services.AddScoped<IStockQuoteValidateApp, StockQuoteValidateApp>();
             services.AddScoped<IStockQuoteValidateService, StockQuoteValidateService>();
             services.AddScoped<IStockQuoteAdapter, StockQuoteAdapter>();            
-            services.AddScoped<IMailAdapter, MailAdapter>();
-
-
+            services.AddScoped<IMailAdapter, MailAdapter>();            
         }
     }
 }
