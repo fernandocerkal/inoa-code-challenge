@@ -24,13 +24,30 @@ namespace inoa.code_challenge.api.Controllers
         [HttpPost]
         public ActionResult<BaseResponse<StockAlertDTO>> Validate(StockQuoteValidateRequest request)
         {
+            var requestId = Guid.NewGuid();
             try
-            {                
-                return Ok(_stockQuoteValidateApp.Validate(request));
+            {                   
+                _logger.LogInformation($"RX:{requestId}:StockQuoteValidateController.Validate");
+
+                if (ModelState.IsValid)
+                {                       
+                    var response = _stockQuoteValidateApp.Validate(request);                    
+                    return Ok(response);
+                }
+                else
+                {
+                    _logger.LogInformation($"TX:{requestId}:StockQuoteValidateController.Validate Error. Model is invalid!");
+                    return BadRequest(new BaseResponse<StockAlertDTO>()
+                    {
+                        Situation = false,
+                        Message = "Invalid Model"
+                    });
+                }
             }
             catch(Exception ex)
             {
-                _logger.LogError("Validade", ex);
+                _logger.LogInformation($"TX:{requestId}:StockQuoteValidateController.Validate Exception. Model is invalid!");
+                _logger.LogError($"TX:{requestId}:StockQuoteValidateController.Validate Exception", ex);
 
                 return BadRequest(new BaseResponse<StockAlertDTO>()
                 {

@@ -16,6 +16,7 @@ namespace inoa.code_challenge.infra
 
         public bool SendMail(StockAlertDTO stockAltert)
         {
+            //todo: melhoria, jogar em uma fila
             using (var client = new SmtpClient(_configuration.SmtpServerHost, _configuration.SmtpServerPort))
             {
                 client.UseDefaultCredentials = false;
