@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using inoa.code_challenge.domain.Interfaces.Adapters;
 using inoa.code_challenge.domain.Interfaces.Services;
 using inoa.code_challenge.domain.Model.DTO.Data;
@@ -19,9 +20,9 @@ namespace inoa.code_challenge.domain.Services
             _stockQuoteAdapter = stockQuoteAdapter;
         }
 
-        public StockAlertDTO Validate(StockQuoteValidateRequest request)
+        public async Task<StockAlertDTO> Validate(StockQuoteValidateRequest request)
         {
-            var stockQuote = _stockQuoteAdapter.GetStockQuote(request);
+            var stockQuote = await _stockQuoteAdapter.GetStockQuote(request);
             
             if (stockQuote.Price > request.MaxPrice)                        
                 return SendMail(request, stockQuote, EStockAlert.ask);                            

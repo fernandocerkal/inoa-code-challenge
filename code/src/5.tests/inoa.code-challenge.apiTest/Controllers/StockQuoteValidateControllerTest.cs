@@ -15,7 +15,7 @@ namespace inoa.code_challenge.apiTest
         [Theory]
         [InlineData("PETR4", 22.67, 22.59, 22.69, EStockAlert.ask)]
         [InlineData("PETR4", 22.67, 22.59, 22.53, EStockAlert.bid)]
-        public void ValidateTest(string stockName, double maxPrice, double minPrice, double currentPrice, EStockAlert stockAlert)
+        public async void ValidateTest(string stockName, double maxPrice, double minPrice, double currentPrice, EStockAlert stockAlert)
         {
             var log = Substitute.For<ILogger<StockQuoteValidateController>>();
             var app = Substitute.For<IStockQuoteValidateApp>();
@@ -37,7 +37,7 @@ namespace inoa.code_challenge.apiTest
 
             var test = new StockQuoteValidateController(log, app);
 
-            var validateResponse = test.Validate(request);
+            var validateResponse = await test.Validate(request);
 
             Assert.True(validateResponse.Result is OkObjectResult);            
 

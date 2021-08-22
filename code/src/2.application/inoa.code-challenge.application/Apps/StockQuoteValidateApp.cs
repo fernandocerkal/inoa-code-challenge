@@ -3,6 +3,7 @@ using inoa.code_challenge.domain.Interfaces.Apps;
 using inoa.code_challenge.domain.Interfaces.Services;
 using inoa.code_challenge.domain.Model.DTO.Data;
 using System;
+using System.Threading.Tasks;
 
 namespace inoa.code_challenge.application.Apps
 {
@@ -14,9 +15,9 @@ namespace inoa.code_challenge.application.Apps
             _stockQuoteValidateService = stockQuoteValidateService;
         }
 
-        public BaseResponse<StockAlertDTO> Validate(StockQuoteValidateRequest request) 
+        public async Task<BaseResponse<StockAlertDTO>> Validate(StockQuoteValidateRequest request) 
         {            
-            var stockAlert = _stockQuoteValidateService.Validate(request);
+            var stockAlert = await _stockQuoteValidateService.Validate(request);
             return new BaseResponse<StockAlertDTO>()
             {
                 Data        = stockAlert,

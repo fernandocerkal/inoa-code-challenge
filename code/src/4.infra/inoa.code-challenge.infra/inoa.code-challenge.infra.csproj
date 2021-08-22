@@ -8,12 +8,16 @@
   <ItemGroup>
     <ProjectReference Include="..\..\3.domain\inoa.code-challenge.domain\inoa.code-challenge.domain.csproj" />
   </ItemGroup>
-
   
   <ItemGroup> 
     <Content Include="Resources\**"> 
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> 
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory> 
     </Content> 
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="NewtonSoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
 </Project>

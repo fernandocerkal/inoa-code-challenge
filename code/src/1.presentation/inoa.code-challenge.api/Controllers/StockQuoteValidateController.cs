@@ -4,6 +4,7 @@ using inoa.code_challenge.domain.Interfaces.Apps;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using inoa.code_challenge.domain.Model.DTO.Data;
+using System.Threading.Tasks;
 
 namespace inoa.code_challenge.api.Controllers
 {
@@ -22,7 +23,7 @@ namespace inoa.code_challenge.api.Controllers
         }
 
         [HttpPost]
-        public ActionResult<BaseResponse<StockAlertDTO>> Validate(StockQuoteValidateRequest request)
+        public async Task<ActionResult<BaseResponse<StockAlertDTO>>> Validate(StockQuoteValidateRequest request)
         {
             var requestId = Guid.NewGuid();
             try
@@ -31,7 +32,7 @@ namespace inoa.code_challenge.api.Controllers
 
                 if (ModelState.IsValid)
                 {                       
-                    var response = _stockQuoteValidateApp.Validate(request);                    
+                    var response = await _stockQuoteValidateApp.Validate(request);                    
                     return Ok(response);
                 }
                 else

@@ -14,7 +14,7 @@ namespace inoa.code_challenge.applicationTest
         [Theory]
         [InlineData("PETR4", 22.67, 22.59, 22.69, EStockAlert.ask)]
         [InlineData("PETR4", 22.67, 22.59, 22.53, EStockAlert.bid)]
-        public void ValidateTest(string stockName, double maxPrice, double minPrice, double currentPrice, EStockAlert stockAlert)
+        public async void ValidateTest(string stockName, double maxPrice, double minPrice, double currentPrice, EStockAlert stockAlert)
         {            
             var service = Substitute.For<IStockQuoteValidateService>();
 
@@ -31,7 +31,7 @@ namespace inoa.code_challenge.applicationTest
 
             var test = new StockQuoteValidateApp(service);
 
-            var validateResponse = test.Validate(request);
+            var validateResponse = await test.Validate(request);
 
             Assert.Equal(validateResponse.Data.Price     , response.Price);
             Assert.Equal(validateResponse.Data.StockName , response.StockName);

@@ -28,9 +28,14 @@ namespace inoa.code_challenge.api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "inoa.code-challenge.api", Version = "v1" });
             });
 
-            DependencyInjection.Configure(services);
             var smtpConfiguration = new SmtpConfiguration();
             new ConfigureFromConfigurationOptions<SmtpConfiguration>(Configuration.GetSection("SmtpConfiguration")).Configure(smtpConfiguration);
+            
+            var stockQuoteAPIConfiguration = new StockQuoteAPIConfiguration();
+            new ConfigureFromConfigurationOptions<StockQuoteAPIConfiguration>(Configuration.GetSection("StockQuoteAPIConfiguration")).Configure(stockQuoteAPIConfiguration);
+            
+            //todo: verificar ioC de configuracoes
+            DependencyInjection.Configure(services, smtpConfiguration, stockQuoteAPIConfiguration);                       
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
