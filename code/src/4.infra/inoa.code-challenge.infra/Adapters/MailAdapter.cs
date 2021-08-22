@@ -25,7 +25,7 @@ namespace inoa.code_challenge.infra
                 
                 using(var mailMessage = new MailMessage())
                 {
-                    mailMessage.From       = new MailAddress(_configuration.EmailHandler.From, "Inoa Code Challenge");                    
+                    mailMessage.From       = new MailAddress(_configuration.EmailHandler.From, _configuration.EmailHandler.FromName);
                     mailMessage.Body       = _configuration.EmailHandler.RenderMailBody(stockAltert);
                     mailMessage.Subject    = _configuration.EmailHandler.Subject;
                     mailMessage.IsBodyHtml = true;
