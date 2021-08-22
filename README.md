@@ -67,15 +67,4 @@ Para executar os testes é necessário digitar dotnet test no console. Sempre ro
 
 1. Para rodar no Linux é necessário instalar o .net core runtime. (Script testado no Ubuntu)
 2. Executar o comando: export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
-3. Executar o comando a partir do diretorio dist/linux/api:
-    dotnet run inoa.code-challenge.api.dll
-4. Executar o comando a partir do diretorio dist/linux/console:
-    ./inoa.code-challenge.console PETR4 20.20 20.10
-
-#### Windows
-
-1. Para rodar no Windows é necessário instalar o .net core runtime.
-2. Executar o comando a partir do diretorio dist/windows/api:
-    dotnet run inoa.code-challenge.api.dll
-3. Executar o comando a partir do diretorio dist/windows/console:
-    inoa.code-challenge.console.exe PETR4 20.20 20.10
+3. Para debugar é necessário escolher a config "Both Console & Web API", pois ela vai rodar tanto a API, quanto o console.
