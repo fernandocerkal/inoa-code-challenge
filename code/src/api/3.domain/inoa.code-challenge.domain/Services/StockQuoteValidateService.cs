@@ -13,8 +13,7 @@ namespace inoa.code_challenge.domain.Services
         private readonly IStockQuoteAdapter _stockQuoteAdapter;
         
         public StockQuoteValidateService(IMailAdapter mailAdapter,
-                                  IStockQuoteAdapter stockQuoteAdapter/*,
-                                  InoaCodeChallengeConfiguration configuration*/)
+                                  IStockQuoteAdapter stockQuoteAdapter)
         {
             _mailAdapter = mailAdapter;
             _stockQuoteAdapter = stockQuoteAdapter;

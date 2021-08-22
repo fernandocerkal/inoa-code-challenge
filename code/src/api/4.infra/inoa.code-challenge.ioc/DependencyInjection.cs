@@ -18,9 +18,14 @@ namespace inoa.code_challenge.ioc
         {   
             services.AddScoped<ISendMailHelper>(m => new SendMailHelper(smtpConfiguration));            
             services.AddScoped<IMailAdapter>(x => new MailAdapter(x.GetService<ISendMailHelper>(), smtpConfiguration));            
+            
+            services.AddHttpClient<IHttpHandler, HttpClientHandler>(h => h.BaseAddress = new Uri(stockQuoteAPIConfiguration.BaseURI));  
+
+            services.AddScoped<IStockQuoteAdapter>(x => new StockQuoteAdapter(x.GetService<IHttpHandler>()));
+
             services.AddScoped<IStockQuoteValidateApp>(x=> new StockQuoteValidateApp(x.GetService<IStockQuoteValidateService>()));
             services.AddScoped<IStockQuoteValidateService>(x=> new StockQuoteValidateService(x.GetService<IMailAdapter>(),x.GetService<IStockQuoteAdapter>()));
-            services.AddHttpClient<IStockQuoteAdapter, StockQuoteAdapter>(h => h.BaseAddress = new Uri(stockQuoteAPIConfiguration.BaseURI));            
+            
         }
     }
 }

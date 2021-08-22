@@ -20,9 +20,7 @@ namespace inoa.code_challenge.infra
         
         public async Task<StockQuoteDTO> GetStockQuote(StockQuoteValidateRequest request)
         {            
-            var uri = string.Concat(_client.BaseAddress.AbsoluteUri, $"{request.StockName}.sao");
-            
-            var json     = await _client.GetStringAsync(uri);                
+            var json     = await _client.GetStringAsync($"{request.StockName}.sao");                
             var jsonData = JsonConvert.DeserializeObject<StockQuoteResponse>(json);
 
             return new StockQuoteDTO()

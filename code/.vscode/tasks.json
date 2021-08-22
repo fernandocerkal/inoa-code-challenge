@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/console/inoa.code-challenge.api/inoa.code-challenge.console.csproj",
+                "${workspaceFolder}/src/console/inoa.code-challenge.console/inoa.code-challenge.console.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -31,7 +31,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/console/inoa.code-challenge.api/inoa.code-challenge.console.csproj",
+                "${workspaceFolder}/src/console/inoa.code-challenge.console/inoa.code-challenge.console.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

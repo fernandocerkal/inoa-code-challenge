@@ -7,34 +7,18 @@ namespace inoa.code_challenge.infra
 {
     public class HttpClientHandler : IHttpHandler
     {
-        private HttpClient _client = new HttpClient();
-
-        public Uri BaseAddress { get; set; }
-
-        public Task<string> GetStringAsync(string requestUri)
+        private readonly HttpClient _client;
+        
+        public HttpClientHandler(HttpClient client)
         {
-            return GetStringAsync(requestUri);
+            _client = client;
         }
 
+        //public Uri BaseAddress { get; set; }
 
-        public HttpResponseMessage Get(string url)
+        public async Task<string> GetStringAsync(string stockName)
         {
-            return GetAsync(url).Result;
-        }
-
-        public HttpResponseMessage Post(string url, HttpContent content)
-        {
-            return PostAsync(url, content).Result;
-        }
-
-        public async Task<HttpResponseMessage> GetAsync(string url)
-        {
-            return await _client.GetAsync(url);
-        }
-
-        public async Task<HttpResponseMessage> PostAsync(string url, HttpContent content)
-        {
-            return await _client.PostAsync(url, content);
+            return await _client.GetStringAsync(string.Concat(_client.BaseAddress.AbsoluteUri, stockName));
         }
     }
 }

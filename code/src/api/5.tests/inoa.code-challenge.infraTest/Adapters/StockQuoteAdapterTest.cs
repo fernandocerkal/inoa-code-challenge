@@ -26,7 +26,7 @@ namespace inoa.code_challenge.infraTest.Adapters
             var urlFake = "http://www.inoa.com";
 
             var httpClient  = Substitute.For<IHttpHandler>();           
-            httpClient.BaseAddress.Returns(new Uri(urlFake));
+            //httpClient.BaseAddress.Returns(new Uri(urlFake));
 
             httpClient.GetStringAsync(Arg.Any<string>()).Returns(JsonConvert.SerializeObject(response));
                         
