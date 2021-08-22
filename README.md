@@ -47,5 +47,12 @@ Dentre outros assemblies...
 
 ### Melhorias em andamento e pendentes:
 
-- Melhoria na injeção de dependência das configurações e das urls
-- Testes em exceções
+- Melhoria na injeção de dependência das configurações e das urls;
+- Testes em exceções;
+- Teste unitário na camada de infra;
+- Criptografar ou mascarar settings;
+
+### Licença
+
+Conforme informado no arquivo "LICENSE" este código está livre para distribuição, alteração e comercialização, sem a necessidade de pagamento de licença, roalties, taxas ou qualquer tipo de cobrança financeira, sem a obrigação da informação do autor.
+Caso tenha dúvida, não deixe de entrar em contato comigo através do e-mail: fernando@cerkal.com.br 
