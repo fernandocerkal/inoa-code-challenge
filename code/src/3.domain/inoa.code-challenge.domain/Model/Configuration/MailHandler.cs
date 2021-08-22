@@ -27,7 +27,7 @@ namespace inoa.code_challenge.domain.Model.Configuration
             using (StreamReader streamReader = new StreamReader(templatePath, Encoding.UTF8))
             {
                 var mailData = StockAltertMailData.FromStockAlert(stockAlert);
-                output = stubble.Render(streamReader.ReadToEnd(), stockAlert);
+                output = stubble.Render(streamReader.ReadToEnd(), mailData);
             }
             return output;
        }       
