@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api/bin/Debug/netcoreapp3.1/inoa.code-challenge.api.dll",
+            "program": "${workspaceFolder}/src/api/1.presentation/inoa.code-challenge.api/bin/Debug/netcoreapp3.1/inoa.code-challenge.api.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api",
+            "cwd": "${workspaceFolder}/src/api/1.presentation/inoa.code-challenge.api",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -29,9 +29,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.console/bin/Debug/netcoreapp3.1/inoa.code-challenge.console.dll",
+            "program": "${workspaceFolder}/src/console/inoa.code-challenge.console/bin/Debug/netcoreapp3.1/inoa.code-challenge.console.dll",
             "args": ["PETR4", "22.23", "22.10"],
-            "cwd": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.console",
+            "cwd": "${workspaceFolder}/src/console/inoa.code-challenge.console",
             "stopAtEntry": false,
             "console": "internalConsole",
             "env": {

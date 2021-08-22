@@ -35,7 +35,7 @@ namespace inoa.code_challenge.console.Manager
 
         private async void DoWork(object state)
         {
-            Console.WriteLine($"Monitorando {_stockQuoteValidateRequest} com intervalo de {time} minutos...");
+            Console.WriteLine($"Monitorando com intervalo de {time} minutos...");
             try
             {
                 var response = await _stockQuoteValidateAdapter.Validate(_stockQuoteValidateRequest);
@@ -61,6 +61,7 @@ namespace inoa.code_challenge.console.Manager
             {
                 Console.WriteLine("Ocorreu um erro na integração com a API: ");
                 Console.WriteLine(ex.Message);
+                Console.WriteLine("Verifique o endereço da API no arquivo de configuração.");
             }
         }
 
