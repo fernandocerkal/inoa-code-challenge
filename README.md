@@ -7,7 +7,7 @@ Este código consiste em um Console app e uma API para monitoramento e aviso de 
 
 Onde você informa o código do ativo a ser monitorado, os valores de suporte e resistência. Então o App informa os momentos de entrada e saída por e-mail.
 
-## Serviços utilizados
+### Serviços utilizados
 **Send Grid**
 
 Utilizado como servidor smtp relay
@@ -16,7 +16,7 @@ Utilizado como servidor smtp relay
 
 Api para consumo de informações sobre a cotação dos ativos
 
-## Softwares utilizados
+### Softwares utilizados
 
 **VSCode**
 
@@ -24,22 +24,28 @@ Api para consumo de informações sobre a cotação dos ativos
 
 **dotnet CLI**
 
-## Framework
+### Framework
 
 **.net core 3.1**
 
-## Libs utilizadas
+### Libs utilizadas
 
 **NewtonSoft.Json**
+
 **Swashbuckle**
+
 **mustache-sharp**
+
 **Stubble.Core**
+
 **xunit**
+
 **NSubstitute**
+
 Dentre outros assemblies...
 
 
-## Melhorias em andamento e pendentes:
+### Melhorias em andamento e pendentes:
 
 - Melhoria na injeção de dependência das configurações e das urls
 - Testes em exceções
