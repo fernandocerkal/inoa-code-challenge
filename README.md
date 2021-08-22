@@ -18,29 +18,29 @@ Api para consumo de informações sobre a cotação dos ativos
 
 ### Softwares utilizados
 
-**VSCode**
+- **VSCode**
 
-**vim**
+- **vim**
 
-**dotnet CLI**
+- **dotnet CLI**
 
 ### Framework
 
-**.net core 3.1**
+- **.net core 3.1**
 
 ### Libs utilizadas
 
-**NewtonSoft.Json**
+- **NewtonSoft.Json**
 
-**Swashbuckle**
+- **Swashbuckle**
 
-**mustache-sharp**
+- **mustache-sharp**
 
-**Stubble.Core**
+- **Stubble.Core**
 
-**xunit**
+- **xunit**
 
-**NSubstitute**
+- **NSubstitute**
 
 Dentre outros assemblies...
 
