@@ -14,6 +14,7 @@ namespace inoa.code_challenge.apiTest
     {
         [Theory]
         [InlineData("PETR4", 22.67, 22.59, 22.69, EStockAlert.ask)]
+        [InlineData("PETR4", 22.67, 22.59, 22.53, EStockAlert.bid)]
         public void ValidateTest(string stockName, double maxPrice, double minPrice, double currentPrice, EStockAlert stockAlert)
         {
             var log = Substitute.For<ILogger<StockQuoteValidateController>>();
