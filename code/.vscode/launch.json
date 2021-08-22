@@ -30,7 +30,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.console/bin/Debug/netcoreapp3.1/inoa.code-challenge.console.dll",
-            "args": [],
+            "args": ["PETR4", "22.23", "22.10"],
             "cwd": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.console",
             "stopAtEntry": false,
             "console": "internalConsole",

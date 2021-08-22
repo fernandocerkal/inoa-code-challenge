@@ -13,18 +13,23 @@ namespace inoa.code_challenge.console.Model.DTO.Message
             request = null;
             double minPrice, maxPrice;
 
-            if (string.IsNullOrEmpty(args[0]))          return false;
-            if (double.TryParse(args[1], out maxPrice)) return false;
-            if (double.TryParse(args[2], out minPrice)) return false;
-
-            request = new StockQuoteValidateRequest()
+            if (string.IsNullOrEmpty(args[0]))           
+                return false;
+                
+            if (double.TryParse(args[1], out maxPrice) &&
+                double.TryParse(args[2], out minPrice)) 
             {
-                  StockName = args[0]
-                , MaxPrice = maxPrice
-                , MinPrice = minPrice
-            };
 
-            return true;
+                request = new StockQuoteValidateRequest()
+                {
+                    StockName = args[0]
+                    , MaxPrice = maxPrice
+                    , MinPrice = minPrice
+                };
+
+                return true;
+            }
+            return false;
         }
 
         public override string ToString()
