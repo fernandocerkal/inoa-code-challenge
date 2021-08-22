@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>inoa.code_challenge.application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\3.domain\inoa.code-challenge.domain\inoa.code-challenge.domain.csproj" />
+  </ItemGroup>
+</Project>
