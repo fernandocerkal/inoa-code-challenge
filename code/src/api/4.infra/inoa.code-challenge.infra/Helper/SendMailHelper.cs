@@ -20,8 +20,7 @@ namespace inoa.code_challenge.infra
             {
                 client.UseDefaultCredentials = false;
                 var passArray = Convert.FromBase64String(_configuration.SmtpServerPassword);
-                string password = System.Text.ASCIIEncoding.ASCII.GetString(passArray);     
-                //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             
+                string password = System.Text.ASCIIEncoding.ASCII.GetString(passArray);                              
                 client.Credentials = new NetworkCredential(_configuration.SmtpServerLogin, password);
                 client.EnableSsl = _configuration.SmtpServerEnableSSL;
 

@@ -66,5 +66,9 @@ Para executar os testes é necessário digitar dotnet test no console. Sempre ro
 #### Linux
 
 1. Para rodar no Linux é necessário instalar o .net core runtime. (Script testado no Ubuntu)
-2. Executar o comando: export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+2. Executar os comandos: 
+    export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+    export ASPNETCORE_ENVIRONMENT=Development
 3. Para debugar é necessário escolher a config "Both Console & Web API", pois ela vai rodar tanto a API, quanto o console.
+
+![Both Console & Web API](doc/img/debug.png)
