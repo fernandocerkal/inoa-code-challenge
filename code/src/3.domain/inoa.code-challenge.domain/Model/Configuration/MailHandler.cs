@@ -1,6 +1,7 @@
-using System;
 using System.IO;
+using System.Reflection;
 using System.Text;
+using inoa.code_challenge.domain.Extensions;
 using inoa.code_challenge.domain.Model.DTO.Data;
 using Stubble.Core.Builders;
 
@@ -20,9 +21,10 @@ namespace inoa.code_challenge.domain.Model.Configuration
             var stubble = new StubbleBuilder().Build();
             string output = string.Empty;
 
-            var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ResourcesPath, string.Concat(stockAlert.StockAlert,".html"));
+            string filePath = Assembly.GetExecutingAssembly().GetDirectoryPath();
+            var templatePath = Path.Combine(filePath, ResourcesPath, string.Concat(stockAlert.StockAlert,".html"));
             
-            using (StreamReader streamReader = new StreamReader(ResourcesPath, Encoding.UTF8))
+            using (StreamReader streamReader = new StreamReader(templatePath, Encoding.UTF8))
             {
                 output = stubble.Render(streamReader.ReadToEnd(), stockAlert);
             }
