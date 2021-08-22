@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Api",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -25,9 +25,32 @@
             }
         },
         {
+            "name": "Console",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.console/bin/Debug/netcoreapp3.1/inoa.code-challenge.console.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/1.presentation/inoa.code-challenge.console",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Both Console & Web API",
+            "configurations": [
+                "Api",
+                "Console"
+            ]
         }
     ]
 }

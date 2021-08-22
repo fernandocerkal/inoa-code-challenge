@@ -1,7 +1,19 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
+        {            
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api/inoa.code-challenge.console.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {            
             "label": "build",
             "command": "dotnet",
             "type": "process",
@@ -19,24 +31,37 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api/inoa.code-challenge.api.csproj",
+                "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api/inoa.code-challenge.console.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "publish",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "watch",
-                "run",
+                "publish",
                 "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api/inoa.code-challenge.api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         }
+        // {
+        //     "label": "watch",
+        //     "command": "dotnet",
+        //     "type": "process",
+        //     "args": ["Api", "Console"],
+        //     // "args": [
+        //     //     "watch",
+        //     //     "run",
+        //     //     "${workspaceFolder}/src/1.presentation/inoa.code-challenge.api/inoa.code-challenge.console.csproj",
+        //     //     "/property:GenerateFullPaths=true",
+        //     //     "/consoleloggerparameters:NoSummary"
+        //     // ],
+        //     "problemMatcher": "$msCompile"
+        // }
     ]
 }

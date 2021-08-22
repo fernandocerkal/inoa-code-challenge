@@ -56,3 +56,10 @@ Dentre outros assemblies...
 
 Conforme informado no arquivo "LICENSE" este código está livre para distribuição, alteração e comercialização, sem a necessidade de pagamento de licença, roalties, taxas ou qualquer tipo de cobrança financeira, sem a obrigação da informação do autor.
 Caso tenha dúvida, não deixe de entrar em contato comigo através do e-mail: fernando@cerkal.com.br 
+
+### Pré-requisitos
+
+#### Ubuntu
+
+1. Para rodar no Ubuntu é necessário instalar o .net core runtime.
+2. Executar o comando: export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1

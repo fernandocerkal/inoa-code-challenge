@@ -31,7 +31,8 @@ namespace inoa.code_challenge.api.Controllers
                 _logger.LogInformation($"RX:{requestId}:StockQuoteValidateController.Validate");
 
                 if (ModelState.IsValid)
-                {                       
+                {           
+                    _logger.LogInformation($"RX:{requestId}:{request.ToString()}");            
                     var response = await _stockQuoteValidateApp.Validate(request);                    
                     return Ok(response);
                 }
