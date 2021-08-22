@@ -5,8 +5,8 @@ using inoa.code_challenge.domain.Model.DTO.Message;
 using NSubstitute;
 using Xunit;
 using Microsoft.Extensions.Logging;
-using inoa.code_challenge.api.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using inoa.code_challenge.api.Controllers;
 
 namespace inoa.code_challenge.apiTest
 {    

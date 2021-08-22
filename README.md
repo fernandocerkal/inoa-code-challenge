@@ -3,7 +3,7 @@
 
 Desafio de code fonte da INOA realizado por mim.
 
-Este código consiste em um Console app e uma API para monitoramento e aviso de oportunidades no mercado financeiro (B3).
+Este código consiste em um Console app e uma API para monitoramento/aviso de oportunidades no mercado financeiro (B3).
 
 Onde você informa o código do ativo a ser monitorado, os valores de suporte e resistência. Então o App informa os momentos de entrada e saída por e-mail.
 
@@ -65,7 +65,7 @@ Para executar os testes é necessário digitar dotnet test no console. Sempre ro
 
 #### Linux
 
-1. Para rodar no Ubuntu é necessário instalar o .net core runtime.
+1. Para rodar no Linux é necessário instalar o .net core runtime. (Script testado no Ubuntu)
 2. Executar o comando: export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 3. Executar o comando a partir do diretorio dist/linux/api:
     dotnet run inoa.code-challenge.api.dll
