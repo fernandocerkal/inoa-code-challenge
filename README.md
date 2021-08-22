@@ -9,15 +9,19 @@ Onde você informa o código do ativo a ser monitorado, os valores de suporte e 
 
 ## Serviços utilizados
 **Send Grid**
+
 Utilizado como servidor smtp relay
 
 **Alpha Vantage**
+
 Api para consumo de informações sobre a cotação dos ativos
 
 ## Softwares utilizados
 
 **VSCode**
+
 **vim**
+
 **dotnet CLI**
 
 ## Framework
