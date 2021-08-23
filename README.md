@@ -7,6 +7,10 @@ Este código consiste em um Console app e uma API para monitoramento/aviso de op
 
 Onde você informa o código do ativo a ser monitorado, os valores de suporte e resistência. Então o App informa os momentos de entrada e saída por e-mail.
 
+O app só encerra quando o preço de suporte ou resistência é atingido.
+
+![Inoa Code Challenge by Luiz Santos](doc/img/inoa-code-challenge.gif)
+
 ### Serviços utilizados
 **Mailjet**
 
