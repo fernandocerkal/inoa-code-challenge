@@ -1,5 +1,3 @@
-using System;
-using System.Net.Mail;
 using inoa.code_challenge.domain.Interfaces.Services;
 using inoa.code_challenge.domain.Model.Configuration;
 using inoa.code_challenge.domain.Model.DTO.Data;
@@ -20,7 +18,7 @@ namespace inoa.code_challenge.infraTest.Adapters
             var sendMail  = Substitute.For<ISendMailHelper>();
             var smtpConfig = Substitute.For<SmtpConfiguration>();
 
-            var mailMessage = new MailMessage();
+            var mailMessage = "Email Teste";
             
             sendMail.Send(mailMessage).Returns(true);            
                         

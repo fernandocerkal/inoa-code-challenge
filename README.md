@@ -7,10 +7,14 @@ Este código consiste em um Console app e uma API para monitoramento/aviso de op
 
 Onde você informa o código do ativo a ser monitorado, os valores de suporte e resistência. Então o App informa os momentos de entrada e saída por e-mail.
 
-### Serviços utilizados
-**Send Grid**
+O app só encerra quando o preço de suporte ou resistência é atingido.
 
-Utilizado como servidor smtp relay
+![Inoa Code Challenge by Luiz Santos](doc/img/inoa-code-challenge.gif)
+
+### Serviços utilizados
+**Mailjet**
+
+Utilizado como servidor smtp relay (testado também com send grid).
 
 **Alpha Vantage**
 
@@ -66,5 +70,9 @@ Para executar os testes é necessário digitar dotnet test no console. Sempre ro
 #### Linux
 
 1. Para rodar no Linux é necessário instalar o .net core runtime. (Script testado no Ubuntu)
-2. Executar o comando: export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+2. Executar os comandos: 
+    export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+    export ASPNETCORE_ENVIRONMENT=Development
 3. Para debugar é necessário escolher a config "Both Console & Web API", pois ela vai rodar tanto a API, quanto o console.
+
+![Both Console & Web API](doc/img/debug.png)

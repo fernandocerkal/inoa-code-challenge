@@ -53,7 +53,7 @@ namespace inoa.code_challenge.console
         private static async Task Starting(StockQuoteValidateRequest stockQuoteValidateRequest)
         {
             Console.WriteLine($"Iniciando o monitoramento de {stockQuoteValidateRequest}");
-            await Task.Delay(5000);
+            await Task.Delay(3000);
         }
     }
 }

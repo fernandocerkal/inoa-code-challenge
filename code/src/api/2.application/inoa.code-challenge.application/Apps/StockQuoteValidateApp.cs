@@ -2,7 +2,6 @@
 using inoa.code_challenge.domain.Interfaces.Apps;
 using inoa.code_challenge.domain.Interfaces.Services;
 using inoa.code_challenge.domain.Model.DTO.Data;
-using System;
 using System.Threading.Tasks;
 
 namespace inoa.code_challenge.application.Apps
