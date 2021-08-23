@@ -1,4 +1,3 @@
-using System;
 using inoa.code_challenge.domain.Interfaces.Adapters;
 using inoa.code_challenge.domain.Model.DTO.Data;
 using inoa.code_challenge.domain.Model.DTO.Data.Enums;

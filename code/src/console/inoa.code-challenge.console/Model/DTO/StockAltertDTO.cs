@@ -1,4 +1,3 @@
-
 using inoa.code_challenge.console.Model.DTO.Enums;
 
 namespace inoa.code_challenge.console.Model.DTO

@@ -14,7 +14,5 @@ namespace inoa.code_challenge.infra.Model.Adapters.AlphaVantage
         public string Symbol { get; set; }
         [JsonProperty("05. price")]
         public string Price { get; set; }
-    }
-
-    
+    }    
 }

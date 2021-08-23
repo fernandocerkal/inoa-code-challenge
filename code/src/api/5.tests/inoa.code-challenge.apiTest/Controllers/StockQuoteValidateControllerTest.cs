@@ -41,10 +41,7 @@ namespace inoa.code_challenge.apiTest
 
             Assert.True(validateResponse.Result is OkObjectResult);            
 
-            app.Received(1).Validate(request);
-            
+            app.Received(1).Validate(request);           
         }
-
-        //todo: testar exception
     }
 }

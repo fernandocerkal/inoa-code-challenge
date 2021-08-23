@@ -8,9 +8,9 @@ Este código consiste em um Console app e uma API para monitoramento/aviso de op
 Onde você informa o código do ativo a ser monitorado, os valores de suporte e resistência. Então o App informa os momentos de entrada e saída por e-mail.
 
 ### Serviços utilizados
-**Send Grid**
+**Mailjet**
 
-Utilizado como servidor smtp relay
+Utilizado como servidor smtp relay (testado também com send grid).
 
 **Alpha Vantage**
 

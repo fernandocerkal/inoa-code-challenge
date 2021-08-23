@@ -1,8 +1,6 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using inoa.code_challenge.domain.Interfaces.Adapters;
 using inoa.code_challenge.domain.Interfaces.Services;
-using inoa.code_challenge.domain.Model.Configuration;
 using inoa.code_challenge.domain.Model.DTO.Data;
 using inoa.code_challenge.domain.Model.DTO.Message;
 using inoa.code_challenge.infra.Model.Adapters.AlphaVantage;

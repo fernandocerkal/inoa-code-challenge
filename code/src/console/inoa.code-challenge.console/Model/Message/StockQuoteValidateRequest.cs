@@ -22,7 +22,7 @@ namespace inoa.code_challenge.console.Model.DTO.Message
 
                 request = new StockQuoteValidateRequest()
                 {
-                    StockName = args[0]
+                    StockName = args[0].ToUpper()
                     , MaxPrice = maxPrice
                     , MinPrice = minPrice
                 };

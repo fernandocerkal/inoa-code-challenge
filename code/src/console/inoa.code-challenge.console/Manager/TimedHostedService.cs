@@ -11,6 +11,7 @@ namespace inoa.code_challenge.console.Manager
 {
     public class TimedHostedService : IHostedService, IDisposable
     {
+        private CancellationToken _cancellationToken;
         private readonly ILogger _logger;
         private readonly IStockQuoteValidateAdapter _stockQuoteValidateAdapter;
         private readonly StockQuoteValidateRequest _stockQuoteValidateRequest;
@@ -28,6 +29,7 @@ namespace inoa.code_challenge.console.Manager
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
+            _cancellationToken = cancellationToken;
             _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromMinutes(time));
 
             return Task.CompletedTask;
@@ -44,10 +46,12 @@ namespace inoa.code_challenge.console.Manager
                     switch(response.Data.StockAlert)
                     {
                         case EStockAlert.ask:
-                            Console.WriteLine("Validação realizada. Enviada recomendação de venda por e-mail.");
+                            Console.WriteLine("Validação realizada. Enviada recomendação de venda por e-mail =)");
+                            Exit();
                             break;
                         case EStockAlert.bid:
-                            Console.WriteLine("Validação realizada. Enviada recomendação de compra por e-mail.");
+                            Console.WriteLine("Validação realizada. Enviada recomendação de compra por e-mail =)");
+                            Exit();
                             break;
                         default:
                             Console.WriteLine("Validação realizada. Nenhuma recomendação foi enviada.");
@@ -63,6 +67,13 @@ namespace inoa.code_challenge.console.Manager
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Verifique o endereço da API no arquivo de configuração.");
             }
+        }
+
+        private void Exit()
+        {
+            Console.WriteLine("O programa será finalizado. Obrigado!");
+            _cancellationToken.ThrowIfCancellationRequested();
+            Environment.Exit(0);
         }
 
         public Task StopAsync(CancellationToken cancellationToken)

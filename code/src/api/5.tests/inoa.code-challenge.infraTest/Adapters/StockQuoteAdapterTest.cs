@@ -1,4 +1,3 @@
-using System;
 using inoa.code_challenge.domain.Interfaces.Services;
 using inoa.code_challenge.domain.Model.DTO.Message;
 using inoa.code_challenge.infra;
@@ -23,10 +22,8 @@ namespace inoa.code_challenge.infraTest.Adapters
                     Symbol = stockName
                 }
             };
-            var urlFake = "http://www.inoa.com";
 
             var httpClient  = Substitute.For<IHttpHandler>();           
-            //httpClient.BaseAddress.Returns(new Uri(urlFake));
 
             httpClient.GetStringAsync(Arg.Any<string>()).Returns(JsonConvert.SerializeObject(response));
                         
@@ -38,7 +35,7 @@ namespace inoa.code_challenge.infraTest.Adapters
             Assert.Equal(result.StockName, response.Data.Symbol);
 
 
-            httpClient.Received(1).GetStringAsync(Arg.Any<string>());
+            await httpClient.Received(1).GetStringAsync(Arg.Any<string>());
         }
     }
 }

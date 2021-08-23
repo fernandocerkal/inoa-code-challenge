@@ -1,4 +1,3 @@
-using System;
 using inoa.code_challenge.application.Apps;
 using inoa.code_challenge.domain.Interfaces.Services;
 using inoa.code_challenge.domain.Model.DTO.Data;
@@ -37,8 +36,7 @@ namespace inoa.code_challenge.applicationTest
             Assert.Equal(validateResponse.Data.StockName , response.StockName);
             Assert.Equal(validateResponse.Data.StockAlert, response.StockAlert);            
 
-            service.Received(1).Validate(request);
-            
+            service.Received(1).Validate(request);            
         }
     }
 }

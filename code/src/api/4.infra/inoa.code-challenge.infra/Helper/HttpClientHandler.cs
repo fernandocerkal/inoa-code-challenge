@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using inoa.code_challenge.domain.Interfaces.Services;
 
@@ -13,8 +12,6 @@ namespace inoa.code_challenge.infra
         {
             _client = client;
         }
-
-        //public Uri BaseAddress { get; set; }
 
         public async Task<string> GetStringAsync(string stockName)
         {
