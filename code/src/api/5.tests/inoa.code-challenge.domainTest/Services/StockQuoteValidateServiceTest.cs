@@ -44,7 +44,7 @@ namespace inoa.code_challenge.domainTest
             Assert.Equal(validateResponse.StockAlert, response.StockAlert);            
 
             mailAdapter.Received(1).SendMail(Arg.Any<StockAlertDTO>());
-            quoteAdapter.Received(1).GetStockQuote(request);
+            await quoteAdapter.Received(1).GetStockQuote(request);
             
         }
     }

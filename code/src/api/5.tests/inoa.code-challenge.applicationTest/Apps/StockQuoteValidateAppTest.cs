@@ -34,9 +34,9 @@ namespace inoa.code_challenge.applicationTest
 
             Assert.Equal(validateResponse.Data.Price     , response.Price);
             Assert.Equal(validateResponse.Data.StockName , response.StockName);
-            Assert.Equal(validateResponse.Data.StockAlert, response.StockAlert);            
+            Assert.Equal(validateResponse.Data.StockAlert, response.StockAlert);
 
-            service.Received(1).Validate(request);            
+            await service.Received(1).Validate(request);            
         }
     }
 }

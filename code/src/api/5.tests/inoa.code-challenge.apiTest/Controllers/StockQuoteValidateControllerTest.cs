@@ -39,9 +39,9 @@ namespace inoa.code_challenge.apiTest
 
             var validateResponse = await test.Validate(request);
 
-            Assert.True(validateResponse.Result is OkObjectResult);            
+            Assert.True(validateResponse.Result is OkObjectResult);
 
-            app.Received(1).Validate(request);           
+            await app.Received(1).Validate(request);           
         }
     }
 }
